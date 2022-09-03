@@ -96,7 +96,9 @@ function App() {
       ],
     },
   ];
-
+  function shuffleArray(questions) {
+    questions.sort(() => Math.random() - 0.5);
+  }
   return (
     <div className="App">
       <h1>Quiz App</h1>
@@ -134,9 +136,7 @@ function App() {
         </div>
       ) : (
         <div className="question-card">
-          <h2>
-            question {currentQuestion + 1} of {questions.length}
-          </h2>
+          <h2>{shuffleArray(questions)}</h2>
           <h3 className="question-text">{questions[currentQuestion].text}</h3>
 
           <ul>
