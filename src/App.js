@@ -51,7 +51,10 @@ function App() {
 
   const questions = [
     {
-      text: "What is the capital of America?",
+      text: `Dalam suatu kelas yang terdiri atas 15 
+      siswa putri dan 12 siswa putra akan dipilih sepasang 
+      ganda campuran (putra dan putri) untuk mewakili kelas. Berapa banyak 
+      cara sepasang ganda campuran itu.`,
       options: [
         { id: 0, text: "New York City", isCorrect: false },
         { id: 1, text: "Boston", isCorrect: false },
@@ -137,7 +140,10 @@ function App() {
       ) : (
         <div className="question-card">
           <h2>{shuffleArray(questions)}</h2>
-          <h3 className="question-text">{questions[currentQuestion].text}</h3>
+          <h3 className="question-text">
+            {" "}
+            {currentQuestion + 1} {"."} {questions[currentQuestion].text}
+          </h3>
 
           <ul>
             {questions[currentQuestion].options.map((option) => {
